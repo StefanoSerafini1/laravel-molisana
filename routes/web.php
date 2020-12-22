@@ -140,5 +140,5 @@ Route::get('/', function () {
         ],
     ];
     
-    return view('home', ['cards' => $data]);
+    return view('molisana_home', ['cards' => $data]);
 });
