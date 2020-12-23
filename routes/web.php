@@ -45,7 +45,7 @@ Route::get('/', function () {
 Route::get('/product/{id}', function ($id) {
     $data = config('site-data');
     $product = $data[$id];
-    $length= count($data);
+    $length= count($data) -1;
     //ritorno alla pagina prodotti il singolo protto richiesto in base al indice lunghezza e id
     return view('product', compact('product', 'length', 'id'));
 }) -> name('product');

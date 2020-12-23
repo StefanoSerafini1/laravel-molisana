@@ -7,9 +7,13 @@
             <div class="navigazione">
                 @if ($id > 0)
                 <a href="{{ route('product', $id - 1 ) }}" >&lt; Prodotto precedente</a>
+                @elseif ($id <= 0)
+                    <a href="{{ route('product', $length - 1) }}" >&lt; Prodotto precedente</a>
                 @endif
                 @if ($id < $length)
                     <a href="{{ route('product', $id + 1 ) }}" > Prodotto successivo &gt;</a>
+                @elseif($id >= $length)
+                    <a href="{{ route('product', $id = 0 ) }}" > Prodotto successivo &gt;</a>
                 @endif
             </div>
             <div class="hero">
