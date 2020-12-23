@@ -9,7 +9,7 @@
             {{-- utilizzo foreach su array lunghe cioè prodotti con tipologia lunga  --}}
             @foreach ($lunghe as $card)
                 <div class="card">
-                    <a href="">
+                    <a href="{{ route('product', $card['id']) }}">
                     <img src="{{ $card['src'] }}" alt="{{ $card['titolo'] }}" srcset="">
                     <h3>{{ $card['titolo']}}</h3>
                     </a>
@@ -19,13 +19,13 @@
     </section>
     @endif
 
-    @if (! @empty($corte))
+    @if (! empty($corte))
         <section class="type-section container">
         <h2>LE CORTE</h2>
         <div class="cards">
             @foreach ($corte as $card)
                 <div class="card">
-                    <a href="">
+                    <a href="{{ route('product', $card['id']) }}">
                     <img src="{{ $card['src'] }}" alt="{{ $card['titolo'] }}" srcset="">
                     <h3>{{ $card['titolo']}}</h3>
                     </a>
@@ -41,7 +41,7 @@
         <div class="cards">
             @foreach ($cortissime as $card)
                 <div class="card">
-                    <a href="">
+                    <a href="{{ route('product', $card['id']) }}">
                     <img src="{{ $card['src'] }}" alt="{{ $card['titolo'] }}" srcset="">
                     <h3>{{ $card['titolo']}}</h3>
                     </a>

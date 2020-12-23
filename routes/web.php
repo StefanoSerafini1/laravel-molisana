@@ -40,11 +40,12 @@ Route::get('/', function () {
 
     //ritorno alla pagina principale i tre array di tipologia
     return view('molisana_home', ['lunghe' => $lunghe,'corte' => $corte,'cortissime' => $cortissime]);
-});
+})->name('molisana_home');
 
 Route::get('/product/{id}', function ($id) {
     $data = config('site-data');
     $product = $data[$id];
-    //ritorno alla pagina prodotti il singolo protto richiesto in base al indice
-    return view('products', ['products' => $product]);
-});
+    $length= count($data);
+    //ritorno alla pagina prodotti il singolo protto richiesto in base al indice lunghezza e id
+    return view('product', compact('product', 'length', 'id'));
+}) -> name('product');
