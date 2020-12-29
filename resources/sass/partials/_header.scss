@@ -2,14 +2,18 @@ header >*{
     display: flex;
     justify-content: center;
     a{
-        margin-bottom: 20px;
-    }
-    i{
         margin: 15px;
         font-size: 20px;
         color:  $principal-text-col;
         cursor: pointer;
         font-family: $sidebar-font;
         font-style: normal;
+    }
+    a:active{
+        background-color: $back-color-prodotto;
+        border-radius: 5px;
+    }
+    a:target{
+        background-color: $back-color-prodotto;
     }
 }

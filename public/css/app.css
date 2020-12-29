@@ -34,9 +34,6 @@ header > * {
   justify-content: center;
 }
 header > * a {
-  margin-bottom: 20px;
-}
-header > * i {
   margin: 15px;
   font-size: 20px;
   color: #20206e;
@@ -44,10 +41,18 @@ header > * i {
   font-family: "Cabin", sans-serif;
   font-style: normal;
 }
+header > * a:active {
+  background-color: #b6dae7;
+  border-radius: 5px;
+}
+header > * a:target {
+  background-color: #b6dae7;
+}
 
 main {
   width: 100%;
   background-image: url("../img/fondo-pag-speciali.jpg");
+  background-size: contain;
   padding-top: 20px;
 }
 
@@ -63,19 +68,22 @@ main {
   font-size: 50px;
   font-weight: 800;
   background-color: #dae2e2f2;
-  padding: 5px;
+  padding: 0px 10px 0px 10px;
+  border-radius: 5px;
 }
 .prodotto .navigazione .precedente {
   position: absolute;
-  top: 130%;
+  top: 120%;
 }
 .prodotto .navigazione .successivo {
   position: absolute;
-  top: 130%;
+  top: 120%;
   right: 0%;
 }
 .prodotto .descrizione {
   padding-bottom: 50px;
   font-weight: bold;
   font-size: 20px;
+  margin: 0 auto;
+  width: 90%;
 }

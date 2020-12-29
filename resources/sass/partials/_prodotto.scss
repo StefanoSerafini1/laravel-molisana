@@ -1,5 +1,5 @@
 .prodotto{
-    background-color : #b6dae7;
+    background-color : $back-color-prodotto;
     margin-top: -20px;
     .navigazione{
         display: flex;
@@ -8,15 +8,16 @@
             font-size: 50px;
             font-weight: 800;
             background-color:#dae2e2f2;
-            padding: 5px;
+            padding: 0px 10px 0px 10px;
+            border-radius: 5px;
         }
         .precedente{
             position: absolute;
-            top: 130%;
+            top: 120%;
         }
         .successivo{
             position: absolute;
-            top: 130%;
+            top: 120%;
             right: 0%;
         }
     }
@@ -24,5 +25,7 @@
         padding-bottom: 50px;
         font-weight: bold;
         font-size: 20px;
+        margin: 0 auto;
+        width: 90%;
     }
 }
