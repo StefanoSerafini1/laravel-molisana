@@ -1,7 +1,8 @@
 body {
   font-family: "Nunito", sans-serif;
-  color: blue;
+  color: #20206e;
   background: #ffff;
+  margin: 0;
 }
 
 img {
@@ -14,7 +15,7 @@ a {
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -26,4 +27,55 @@ a {
 .cards .card {
   flex-basis: 32%;
   margin-right: 1%;
+}
+
+header > * {
+  display: flex;
+  justify-content: center;
+}
+header > * a {
+  margin-bottom: 20px;
+}
+header > * i {
+  margin: 15px;
+  font-size: 20px;
+  color: #20206e;
+  cursor: pointer;
+  font-family: "Cabin", sans-serif;
+  font-style: normal;
+}
+
+main {
+  width: 100%;
+  background-image: url("../img/fondo-pag-speciali.jpg");
+  padding-top: 20px;
+}
+
+.prodotto {
+  background-color: #b6dae7;
+  margin-top: -20px;
+}
+.prodotto .navigazione {
+  display: flex;
+}
+.prodotto .navigazione a {
+  color: cornsilk;
+  font-size: 50px;
+  font-weight: 800;
+  background-color: #dae2e2f2;
+  padding: 5px;
+}
+.prodotto .navigazione .precedente {
+  position: absolute;
+  top: 130%;
+}
+.prodotto .navigazione .successivo {
+  position: absolute;
+  top: 130%;
+  right: 0%;
+}
+.prodotto .descrizione {
+  padding-bottom: 50px;
+  font-weight: bold;
+  font-size: 20px;
 }

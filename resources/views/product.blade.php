@@ -3,19 +3,19 @@
 @section('content')
 
     <section class="prodotto {{ $product['src-h'] }}">
+        <div class="navigazione">
+            @if ($id > 0)
+                <a class="precedente" href="{{ route('product', $id - 1 ) }}" >&lt;<i class="fas fa-angle-left"></i></a>
+            @elseif ($id <= 0)
+                <a class="precedente" href="{{ route('product', $length - 1) }}" >&lt;<i class="fas fa-angle-left"></i></a>
+            @endif
+            @if ($id < $length)
+                <a class="successivo" href="{{ route('product', $id + 1 ) }}" ><i class="fas fa-angle-right"></i>&gt;</a>
+            @elseif($id >= $length)
+                <a class="successivo" href="{{ route('product', $id = 0 ) }}" ><i class="fas fa-angle-right"></i>&gt;</a>
+            @endif
+        </div>
         <div class="container">
-            <div class="navigazione">
-                @if ($id > 0)
-                <a href="{{ route('product', $id - 1 ) }}" >&lt; Prodotto precedente</a>
-                @elseif ($id <= 0)
-                    <a href="{{ route('product', $length - 1) }}" >&lt; Prodotto precedente</a>
-                @endif
-                @if ($id < $length)
-                    <a href="{{ route('product', $id + 1 ) }}" > Prodotto successivo &gt;</a>
-                @elseif($id >= $length)
-                    <a href="{{ route('product', $id = 0 ) }}" > Prodotto successivo &gt;</a>
-                @endif
-            </div>
             <div class="hero">
                 <h1></h1>
                 <img src="{{ $product ['src-h']}}" alt="{{ $product['titolo']}}">

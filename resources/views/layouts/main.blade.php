@@ -5,16 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Laravel</title>
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap" rel="stylesheet">
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
     <body>
         @include('partials.header')
-        <aside>Chi siamo</aside>
         <main>
             @yield('content')
         </main>
-        @include('partials.footer')
+        @include('partials.footer');
     </body>
 </html>
