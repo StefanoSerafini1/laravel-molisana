@@ -8,12 +8,14 @@ header >*{
         cursor: pointer;
         font-family: $sidebar-font;
         font-style: normal;
-    }
-    a:active{
-        background-color: $back-color-prodotto;
-        border-radius: 5px;
-    }
-    a:target{
-        background-color: $back-color-prodotto;
+        transition: .5s;
+        padding: 10px;
+        &:hover, &:active {
+            text-decoration: none;
+            color: #001942;
+            background-color: #B3E5FC;
+            border-radius: 5px;
+            transition: .2s;
+        }
     }
 }

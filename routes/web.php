@@ -49,3 +49,9 @@ Route::get('/product/{id}', function ($id) {
     //ritorno alla pagina prodotti il singolo protto richiesto in base al indice lunghezza e id
     return view('product', compact('product', 'length', 'id'));
 }) -> name('product');
+//pagina news
+
+Route::get('/news', function () {
+    
+    return view('news');
+}) -> name('news');

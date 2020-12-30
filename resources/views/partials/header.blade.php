@@ -7,6 +7,6 @@
     <div class="sidebar">
         <a class="target" href="/">Home</a>
         <a class="target" href="{{ route('product', $id = 0 ) }}">Prodotti</a>
-        <a class="target">News</a>
+        <a class="target" href="/news">News</a>
     </div>
 </header>
